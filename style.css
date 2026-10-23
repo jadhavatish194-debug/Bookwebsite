@@ -1611,3 +1611,732 @@ gap: 10px;
         gap: 10px;
     }
 }
+
+
+/* =========================================
+   MOBILE & TABLET RESPONSIVE DESIGN
+   Book Website - Atish Jadhav
+========================================= */
+
+/* Prevent horizontal scrolling */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: clip;
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow-x: clip;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+section,
+footer,
+header {
+    max-width: 100%;
+}
+
+/* =========================================
+   TABLET: 768px - 1024px
+========================================= */
+
+@media (max-width: 1024px) {
+
+    .book-section,
+    .booklink,
+    .about-card,
+    .my-books-blog,
+    .reader-testimonials,
+    .book-footer {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .book-card {
+        gap: 24px;
+        padding: 24px;
+    }
+
+    .book-card > img {
+        width: 38% !important;
+        max-width: 300px;
+        height: auto;
+        object-fit: contain;
+        flex-shrink: 0;
+    }
+
+    .book-info {
+        min-width: 0;
+        flex: 1;
+    }
+
+    .book-info h3 {
+        font-size: clamp(20px, 2.5vw, 28px);
+    }
+
+    .book-info p,
+    .healer-content p,
+    .wish-content p,
+    .hunt-content p {
+        overflow-wrap: anywhere;
+    }
+
+    .healer-friend,
+    .wish-stayed,
+    .hunt-stayed {
+        gap: 25px;
+        padding: 25px;
+    }
+
+    .healer-image,
+    .wish-image,
+    .hunt-image {
+        flex: 0 0 38%;
+        min-width: 0;
+    }
+
+    .healer-image img,
+    .wish-image img,
+    .hunt-image img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .healer-content,
+    .wish-content,
+    .hunt-content {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .books-blog-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+    .about-card {
+        gap: 30px;
+        padding: 30px;
+    }
+
+    .Aboutme,
+    .Aboutme-second {
+        min-width: 0;
+    }
+
+    .Aboutme-second img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* =========================================
+   MOBILE: 767px AND BELOW
+========================================= */
+
+@media (max-width: 767px) {
+
+    /* General spacing and typography */
+    body {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    section {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    h1 {
+        font-size: clamp(27px, 7vw, 36px);
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: clamp(23px, 6vw, 30px);
+        line-height: 1.3;
+    }
+
+    h3 {
+        font-size: 21px;
+        line-height: 1.4;
+    }
+
+    p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    /* Navigation */
+    .navbar {
+        width: 100%;
+        padding: 12px 16px;
+    }
+
+    .navbar nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .navbar nav h4 {
+        margin: 0;
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .navbar nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 8px 18px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .navbar nav ul li {
+        margin: 0;
+    }
+
+    .navbar nav ul li a {
+        display: inline-block;
+        padding: 5px 0;
+        font-size: 14px;
+    }
+
+    /* Book collection heading */
+    .book-section {
+        padding: 35px 14px 25px;
+    }
+
+    .book-heading {
+        width: 100%;
+        margin: 0 auto 25px;
+        text-align: center;
+    }
+
+    .book-heading h2 {
+        margin: 10px 0;
+    }
+
+    .book-heading p {
+        margin: 10px auto;
+    }
+
+    /* Book carousel */
+    .book-carousel {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .book-viewport {
+        flex: 1;
+        width: 0;
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    .book-track {
+        display: flex;
+        min-width: 0;
+    }
+
+    .book-card {
+        display: flex;
+        flex: 0 0 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        width: 100%;
+        min-width: 0;
+        padding: 20px 14px;
+        text-align: center;
+    }
+
+    .book-card > img {
+        display: block;
+        width: auto !important;
+        max-width: min(70%, 230px);
+        height: auto;
+        max-height: 310px;
+        margin: 0 auto;
+        object-fit: contain;
+    }
+
+    .book-info {
+        width: 100%;
+        min-width: 0;
+        text-align: center;
+    }
+
+    .book-info h3 {
+        margin: 0 0 12px;
+        font-size: 23px;
+    }
+
+    .book-info p {
+        margin: 0 0 18px;
+        text-align: left;
+        overflow-wrap: anywhere;
+    }
+
+    .book-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        max-width: 100%;
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    .book-arrow {
+        flex-shrink: 0;
+        width: 32px;
+        height: 40px;
+        padding: 0;
+        font-size: 18px;
+    }
+
+    .book-dots {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin: 18px auto 0;
+    }
+
+    /* Introductory quote */
+    .starting-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 24px 18px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .starting-info p {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    /* About the author */
+    .about-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        width: 100%;
+        padding: 28px 18px;
+        margin: 0 auto;
+    }
+
+    .Aboutme {
+        order: 2;
+        width: 100%;
+        min-width: 0;
+        text-align: left;
+    }
+
+    .hero-heading {
+        text-align: center;
+    }
+
+    .hero-heading h1 {
+        margin-bottom: 10px;
+    }
+
+    .hero-heading p {
+        font-size: 14px;
+    }
+
+    .Aboutme .small-text {
+        margin-top: 18px;
+        overflow-wrap: anywhere;
+    }
+
+    .Aboutme-second {
+        order: 1;
+        width: 100%;
+        max-width: 260px;
+        margin: 0 auto;
+    }
+
+    .Aboutme-second img {
+        display: block;
+        width: 100%;
+        max-width: 260px;
+        height: auto;
+        margin: 0 auto;
+        object-fit: cover;
+    }
+
+    /* Discover my books */
+    .booklink {
+        width: 100%;
+        padding: 30px 14px;
+    }
+
+    .booklink > h1,
+    .booklink > p {
+        text-align: center;
+    }
+
+    .healer-friend,
+    .wish-stayed,
+    .hunt-stayed {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        padding: 20px 15px;
+        margin: 25px auto;
+    }
+
+    .healer-image,
+    .wish-image,
+    .hunt-image {
+        flex: none;
+        width: 100%;
+        max-width: 280px;
+        min-width: 0;
+        margin: 0 auto;
+    }
+
+    .healer-image img,
+    .wish-image img,
+    .hunt-image img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        object-fit: contain;
+    }
+
+    .healer-content,
+    .wish-content,
+    .hunt-content {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        text-align: left;
+    }
+
+    .healer-content h3,
+    .wish-content h3,
+    .hunt-content h3 {
+        text-align: center;
+    }
+
+    .healer-content p,
+    .wish-content p,
+    .hunt-content p {
+        overflow-wrap: anywhere;
+    }
+
+    /* Purchase and ebook buttons */
+    .healer-buttons,
+    .healer-buttons-ebook,
+    .wish-buttons,
+    .wish-buttons-ebook,
+    .hunt-buttons,
+    .hunt-buttons-ebook {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .healer-buttons-ebook p,
+    .wish-buttons-ebook p,
+    .hunt-buttons-ebook p {
+        flex: 0 0 100%;
+        width: 100%;
+        margin: 10px 0 0 !important;
+        text-align: center;
+    }
+
+    .healer-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        max-width: 100%;
+        padding: 10px 15px;
+        text-align: center;
+        overflow-wrap: anywhere;
+    }
+
+    /* Writing journey heading */
+    .Blog-start {
+        width: 100%;
+        padding: 35px 18px;
+        text-align: center;
+    }
+
+    .Blog-start h2 {
+        margin-bottom: 12px;
+    }
+
+    .Blog-start h4 {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    /* Blog cards */
+    .my-books-blog {
+        width: 100%;
+        padding: 20px 14px;
+    }
+
+    .books-blog-container {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .books-blog-card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    .books-blog-cover {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .books-blog-cover img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .books-blog-info {
+        width: 100%;
+        min-width: 0;
+        padding: 18px;
+    }
+
+    .books-blog-info h3 {
+        font-size: 21px;
+        overflow-wrap: anywhere;
+    }
+
+    .books-blog-info p {
+        overflow-wrap: anywhere;
+    }
+
+    .books-blog-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        min-height: 44px;
+        max-width: 100%;
+    }
+
+    /* Reader reviews */
+    .Readers_Review {
+        width: 100%;
+        padding: 30px 18px;
+        text-align: center;
+    }
+
+    .reader-testimonials {
+        display: block;
+        width: 100%;
+        padding: 10px 14px 30px;
+    }
+
+    .testimonial-column {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .testimonial-item {
+        width: 100%;
+        min-width: 0;
+        padding: 20px 16px;
+        overflow-wrap: anywhere;
+    }
+
+    .testimonial-item blockquote {
+        margin: 0 0 18px;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .reader-info h3 {
+        font-size: 18px;
+    }
+
+    /* Footer */
+    .book-footer {
+        width: 100%;
+        padding: 35px 18px 20px;
+    }
+
+    .footer-content {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .footer-content h2 {
+        font-size: 25px;
+        line-height: 1.35;
+    }
+
+    .footer-message {
+        font-size: 14px;
+    }
+
+    .footer-social {
+        width: 100%;
+    }
+
+    .social-links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .social-links a {
+        display: inline-block;
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    .footer-divider {
+        margin: 24px 0;
+    }
+
+    .footer-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .footer-bottom p {
+        margin: 0;
+        font-size: 13px;
+    }
+}
+
+/* =========================================
+   SMALL MOBILE: 380px AND BELOW
+========================================= */
+
+@media (max-width: 380px) {
+
+    .navbar {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .navbar nav ul {
+        gap: 6px 12px;
+    }
+
+    .navbar nav ul li a {
+        font-size: 13px;
+    }
+
+    .book-section {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .book-card {
+        padding: 16px 8px;
+    }
+
+    .book-card > img {
+        max-width: 75%;
+        max-height: 270px;
+    }
+
+    .book-arrow {
+        width: 25px;
+    }
+
+    .healer-friend,
+    .wish-stayed,
+    .hunt-stayed {
+        padding: 16px 12px;
+    }
+
+    .healer-btn {
+        padding: 9px 12px;
+        font-size: 13px;
+    }
+
+    .books-blog-info {
+        padding: 15px;
+    }
+
+    .footer-content h2 {
+        font-size: 23px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+    }
+}
